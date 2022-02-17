@@ -4,16 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95C8D059-7951-472E-9E0E-2E8FC74CC21B}</ProjectGuid>
+    <ProjectGuid>{2B899F20-250E-4189-B6B5-6ED320E9263E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RuntimeApplication</RootNamespace>
-    <AssemblyName>RuntimeApplication</AssemblyName>
+    <RootNamespace>RuntimeApplication2</RootNamespace>
+    <AssemblyName>RuntimeApplication2</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -93,19 +91,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SampleApplication.cs" />
-    <Compile Include="SampleCommandClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleApplication2.cs" />
+    <Compile Include="SampleCommandClass2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
 </Project>

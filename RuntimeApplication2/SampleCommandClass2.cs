@@ -1,24 +1,24 @@
 ﻿using System.Windows;
 using Autodesk.AutoCAD.Runtime;
-using RuntimeApplication;
 using Newtonsoft.Json;
+using RuntimeApplication2;
 
-[assembly: CommandClass(typeof(SampleCommandClass))]
-namespace RuntimeApplication
+[assembly: CommandClass(typeof(SampleCommandClass2))]
+namespace RuntimeApplication2
 {
-  public class SampleCommandClass
+  public class SampleCommandClass2
   {
-    [CommandMethod("SAMPLE", "SAMPLE_TestWPFCommand", CommandFlags.NoPaperSpace)]
+    [CommandMethod("ASAMPLE", "ASAMPLE_TestWPFCommand", CommandFlags.NoPaperSpace)]
     public static void TestWPFMethod()
     {
       try
       {
         var json = "{\"menu\":{\"id\":\"file\",\"value\":\"File\",\"popup\":{\"menuitem\":[{\"value\":\"New\",\"onclick\":\"CreateNewDoc()\"},{\"value\":\"Open\",\"onclick\":\"OpenDoc()\"},{\"value\":\"Close\",\"onclick\":\"CloseDoc()\"}]}}}";
-        MessageBox.Show($"RuntimeApplication1: {JsonConvert.DeserializeObject(json)}");
+        MessageBox.Show($"RuntimeApplication2: {JsonConvert.DeserializeObject(json)}");
       }
       catch (Exception ex)
       {
-        MessageBox.Show($"RuntimeApplication1: {ex.Message}");
+        MessageBox.Show($"RuntimeApplication2: {ex.Message}");
       }
     }
   }

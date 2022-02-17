@@ -13,11 +13,11 @@ namespace RuntimeApplication
       try
       {
         var json = "{\"menu\":{\"id\":\"file\",\"value\":\"File\",\"popup\":{\"menuitem\":[{\"value\":\"New\",\"onclick\":\"CreateNewDoc()\"},{\"value\":\"Open\",\"onclick\":\"OpenDoc()\"},{\"value\":\"Close\",\"onclick\":\"CloseDoc()\"}]}}}";
-        MessageBox.Show(JsonConvert.DeserializeObject(json)?.ToString());
+        MessageBox.Show($"RuntimeApplication1: {JsonConvert.DeserializeObject(json)}");
       }
       catch (Exception ex)
       {
-        MessageBox.Show(ex?.Message);
+        MessageBox.Show($"RuntimeApplication1: {ex.Message}");
       }
     }
 
