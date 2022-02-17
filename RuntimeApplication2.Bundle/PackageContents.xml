@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0"
+                    AppVersion="1.0"
+                    Author="Esri"
+                    ProductCode="{7A0EB82E-521D-4AE3-BA00-7D72B0BA61AF}"
+                    UpgradeCode=""
+                    Name="RuntimeApplication2"
+                    Description="RuntimeApplication2"
+                    AutodeskProduct="AutoCAD*"
+                    ProductType="Application"
+                    SupportedLocales="Enu" >
+  <CompanyDetails Name="Esri"
+                  Email="support@esri.com" />
+
+  <Components Description="RuntimeApplication2">
+    <RuntimeRequirements SupportPath="./Contents"
+                         OS="Win64"
+                         Platform="AutoCAD*"
+                         SeriesMin="R21.0"  />
+    <ComponentEntry ModuleName="./Contents/RuntimeApplication2.dll"
+                    LoadOnAutoCADStartup="True"
+                    LoadOnCommandInvocation="False" />
+  </Components>
+
+  <Components Description="newtonsoft.json">
+    <RuntimeRequirements SupportPath="./Contents"
+                         OS="Win64"
+                         Platform="AutoCAD*"
+                         SeriesMin="R21.0"  />
+    <ComponentEntry ModuleName="./Contents/Newtonsoft.Json.dll"
+                    LoadOnAutoCADStartup="True"
+                    LoadOnCommandInvocation="False" />
+  </Components>
+
+</ApplicationPackage>
